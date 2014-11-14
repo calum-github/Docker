@@ -12,7 +12,7 @@ MAINTAINER Calum Hunter (calum.hunter@det.nsw.edu.au)
 RUN mkdir /nbi
 RUN chmod -R 755 /nbi
 
-ADD Auto_NBI_14A389.nbi.zip /nbi/Auto_NBI_14A389.nbi.zip
+ADD Auto_NBI_14A389_r2.nbi.zip /nbi/Auto_NBI_14A389_r2.nbi.zip
 ADD start.sh /usr/local/start.sh
 RUN chmod +x /usr/local/start.sh
 RUN chmod -R 755 /nbi
