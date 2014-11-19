@@ -9,12 +9,12 @@ FROM busybox
 
 MAINTAINER Calum Hunter (calum.hunter@det.nsw.edu.au)
 
-RUN mkdir /nbi
-RUN chmod -R 755 /nbi
+COPY start.sh /usr/local/start.sh
 
-ADD Auto_NBI_14A389_r2.nbi.zip /nbi/Auto_NBI_14A389_r2.nbi.zip
-ADD start.sh /usr/local/start.sh
-RUN chmod +x /usr/local/start.sh
+RUN mkdir /nbi && chmod -R 755 /nbi && chmod +x /usr/local/start.s
+
+COPY Auto_NBI_14A389_r2.nbi /nbi/Auto_NBI_14A389_r2.nbi
+
 RUN chmod -R 755 /nbi
 
 VOLUME /nbi
