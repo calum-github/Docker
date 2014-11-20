@@ -9,14 +9,8 @@ FROM busybox
 
 MAINTAINER Calum Hunter (calum.hunter@det.nsw.edu.au)
 
-COPY start.sh /usr/local/start.sh
-
-RUN mkdir /nbi && chmod -R 755 /nbi && chmod +x /usr/local/start.s
+RUN mkdir /nbi && chmod -R 755 /nbi                                
 
 COPY Auto_NBI_14A389_r2.nbi /nbi/Auto_NBI_14A389_r2.nbi
 
-RUN chmod -R 755 /nbi
-
 VOLUME /nbi
-
-CMD ["/usr/local/start.sh"]
